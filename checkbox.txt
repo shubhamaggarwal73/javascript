@@ -3,8 +3,8 @@
 <body>
     <br>
     Name
-    <button type="button" id="btn" onclick="add">add</button>
     <input type="text" id="texto">
+    <button type="button" id="btn" onclick="add">add</button>
     <ul id="ul"> </ul>
 
    <script type="text/javascript">
