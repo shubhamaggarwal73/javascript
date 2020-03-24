@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <br>
+    Name
+    <input type="text" id="texto">
+    <button type="button" id="btn" onclick="add">add</button>
+    <ul id="ul"> </ul>
+
+   <script type="text/javascript">
+       function addItem(){
+           var ul = document.getElementById('ul'); //ul
+           var li = document.createElement('li');//li
+           var text = document.getElementById('texto');
+           li.appendChild(document.createTextNode(text.value));
+           ul.appendChild(li);  
+       }
+       var button = document.getElementById('btn');
+       button.onclick = addItem 
+   </script>
+</body>
+</html>

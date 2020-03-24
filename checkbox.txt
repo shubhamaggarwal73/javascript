@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <br>
+    Name
+    <button type="button" id="btn" onclick="add">add</button>
+    <input type="text" id="texto">
+    <ul id="ul"> </ul>
+
+   <script type="text/javascript">
+      function addItem(){
+    var ul = document.getElementById('ul'); //ul
+    var li = document.createElement('li');//li
+
+    var checkbox = document.createElement('input');
+        checkbox.type = "checkbox";
+        checkbox.value = 1;
+        checkbox.name = "todo[]";
+
+    li.appendChild(checkbox);
+
+    var text = document.getElementById('texto');
+    li.appendChild(document.createTextNode(text.value));
+    ul.appendChild(li); 
+}
+
+var button = document.getElementById('btn');
+button.onclick = addItem;
+   </script>
+</body>
+</html>

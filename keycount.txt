@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+function countChars(countfrom,displayto)
+{
+  var len = document.getElementById(countfrom).value.length;
+  document.getElementById(displayto).innerHTML = len;
+}
+</script>
+
+
+<label>Enter Character</label><br>
+<textarea id="data" cols="40" rows="5"
+onkeyup="countChars('data','charcount');" onkeydown="countChars('data','charcount');"
+onmouseout="countChars('data','charcount');">
+</textarea><br>
+<span id="charcount">0</span> 
+</html>

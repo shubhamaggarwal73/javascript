@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+function countChars()
+{
+    var textarea  = document.getElementById('data').value;
+    var specialCharacters = textarea.match(/[@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/g);
+
+    if(specialCharacters == null) return;
+
+    document.getElementById('charcount').innerHTML = specialCharacters.length;
+}
+</script>
+
+
+<label>Enter Character</label><br>
+<textarea id="data" cols="40" rows="5"
+onkeyup="countChars();" onkeydown="countChars();"
+onmouseout="countChars();"></textarea>
+<span id="charcount">0</span>
+</html>
